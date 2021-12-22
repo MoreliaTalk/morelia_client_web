@@ -13,7 +13,7 @@
     "toastify-js": "^1.11.1"
   },
   "scripts": {
-    "start": "webpack --mode development --watch",
+    "dev": "webpack-dev-server --mode development --open --hot",
     "schemaCompile": "cd src/server_communication/schemas/ && ajv compile -s schema.json -o validate_schema.js -r sub/**/*.json --use-defaults"
   },
   "devDependencies": {
@@ -31,7 +31,8 @@
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.2",
     "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.7.0"
   },
   "resolutions": {
     "@types/react": "^17.0.15"
