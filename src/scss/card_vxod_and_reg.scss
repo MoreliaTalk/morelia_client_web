@@ -17,9 +17,9 @@ You should have received a copy of the GNU General Public License
 along with MoreliaClientElectron. If not, see <https://www.gnu.org/licenses/>.
 */
 
-@use "variables.scss";
-@use "input.scss";
-@use "button.scss";
+@use "variables";
+@use "input";
+@use "button";
 
 @mixin Card_V_A_R($type) {
     border-radius: 10px;

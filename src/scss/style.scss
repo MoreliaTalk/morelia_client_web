@@ -18,10 +18,10 @@ along with MoreliaClientElectron. If not, see <https://www.gnu.org/licenses/>.
 */
 
 @use "message";
-@use "variables.scss";
-@use "input.scss";
-@use "button.scss";
-@use "card_vxod_and_reg.scss";
+@use "variables";
+@use "input";
+@use "button";
+@use "card_vxod_and_reg";
 
 @font-face {
     font-family: RobotoRegular;

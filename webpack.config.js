@@ -3,11 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
-    target: "electron-renderer",
-    context: __dirname,
-    entry: "./src/render/source/index.tsx",
+    entry: "./src/index.tsx",
     output: {
-        path: path.join(__dirname, "./src/render/dist/"),
+        path: path.join(__dirname, "./dist/"),
         filename: "index_bundle.js"
     },
     module: {
@@ -41,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-          template: "./src/render/source/index.html"
+          template: "./src/index.html"
         }),
         new ForkTsCheckerWebpackPlugin()
     ],
