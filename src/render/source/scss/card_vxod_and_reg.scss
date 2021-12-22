@@ -1,0 +1,88 @@
+/*
+Copyright (c) 2021 - present NekrodNIK
+
+This file is part of MoreliaClientElectron.
+
+MoreliaClientElectron is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoreliaClientElectron is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoreliaClientElectron. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+@use "variables.scss";
+@use "input.scss";
+@use "button.scss";
+
+@mixin Card_V_A_R($type) {
+    border-radius: 10px;
+    width: 30vw;
+    transition: all 400ms ease;
+
+    #RegVxodLabel{
+        margin: 10px;
+        padding: 10px;
+        background-color: variables.$background_color;
+        border-radius: 10px;
+        text-align: center;
+        transition: all 400ms ease;
+    }
+
+    #input_and_button{
+        padding: 10px;
+        background-color: variables.$background_color;
+        border-radius: 10px;
+        margin: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        #knopkaRegVxod{
+            height: 43px;
+            transition: all 400ms ease;
+        }
+
+        input{
+            transition: all 400ms ease;
+        }
+
+    }
+
+    @if ($type == "vxod"){
+        background-color: variables.$primary_color;
+        #RegVxodLabel{
+            color: variables.$primary_color;
+        }
+
+        input{
+            @include input.INPUT_styled(variables.$secondary_color);
+        }
+
+        #knopkaRegVxod{
+            @include button.BUTTON_styled_outlined(variables.$secondary_color);
+        }
+
+    } @else if ($type == "reg") {
+        background-color: variables.$secondary_color;
+        #RegVxodLabel{
+            color: variables.$secondary_color;
+        }
+
+        input{
+            @include input.INPUT_styled(variables.$primary_color);
+        }
+
+        #knopkaRegVxod{
+            @include button.BUTTON_styled_outlined(variables.$primary_color);
+        }
+
+    }
+}

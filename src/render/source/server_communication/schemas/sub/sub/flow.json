@@ -1,0 +1,16 @@
+{
+    "$id": "flow.json",
+    "nullable": true,
+    "type": "object",
+    "properties": {
+        "uuid": { "type": "string", "default": null, "nullable": true },
+        "time": { "type": "integer", "default": null, "nullable": true },
+        "type": { "type": "string", "default": null, "nullable": true },
+        "owner": { "type": "string", "default": null, "nullable": true },
+        "users": { "type": "array", "items": { "type": "string" }, "default": null, "nullable": true },
+        "title": { "type": "string",  "default": null, "nullable": true },
+        "info": { "type": "string", "default": null, "nullable": true },
+        "message_start": { "type": "integer", "default": null, "nullable": true },
+        "message_end": { "type": "integer", "default": null, "nullable": true }
+    }
+}
