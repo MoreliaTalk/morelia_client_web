@@ -24,8 +24,6 @@ import InputPole from "./components/InputPole";
 import MessagePole from "./components/MessagePole";
 import Register_Pole from "./components/Register_Pole";
 
-const { getGlobal } = require("electron").remote
-
 import Server_Com from "./server_communication/server_com";
 
 import "toastify-js/src/toastify.css"
@@ -57,9 +55,9 @@ class Main extends Component{
             reloaded: false
         }
 
-        var db = getGlobal("db")
+        /*var db = getGlobal("db")
         this.db = new db()
-        this.db.connect()
+        this.db.connect()*/
 
         this.add_message_to_MessagePole = this.add_message_to_MessagePole.bind(this)
         this.reload = this.reload.bind(this)
@@ -87,7 +85,8 @@ class Main extends Component{
 
     render(){
         var data_render: JSX.Element;
-        if (this.db.is_login_data()) {
+        // this.db.is_login_data()
+        if (true) {
             data_render = 
             <div id = "Main_root">
                 <MessagePole data={this.state.massiv_mes}/>
